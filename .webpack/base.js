@@ -1,15 +1,7 @@
-const ESLintPlugin = require('eslint-webpack-plugin');
-const path = require('path');
+const ESLintPlugin = require('eslint-webpack-plugin')
+const path = require('path')
 
 module.exports = {
-  entry: {
-    index: {
-      import: './src/main/index.ts',
-    },
-    assetsManager: {
-      import: './src/plugins/assetsManager/index.ts',
-    },
-  },
   module: {
     rules: [
       {
@@ -29,11 +21,9 @@ module.exports = {
     }),
   ],
   resolve: {
-    extensions: ['.tsx', '.ts', '.js'],
+    extensions: ['.tsx', '.ts', '.js', '.scss'],
     alias: {
-      Main: path.resolve(__dirname, 'src/main/'),
-      AssetsManager: path.resolve(__dirname, 'src/plugins/assetsManager/'),
-      Test: path.resolve(__dirname, 'src/test/'),
+      '~': path.resolve(__dirname, '../src'),
     },
   },
-};
+}

@@ -1,8 +1,6 @@
+const path = require('path')
 module.exports = {
-  extends: [
-    'airbnb-typescript/base',
-    'plugin:prettier/recommended'
-  ],
+  extends: ['airbnb-typescript/base', 'plugin:prettier/recommended'],
   parserOptions: {
     project: './tsconfig.json',
   },
@@ -12,8 +10,23 @@ module.exports = {
     '@typescript-eslint/lines-between-class-members': [
       'error',
       'always',
-      { 'exceptAfterSingleLine': true },
+      { exceptAfterSingleLine: true },
     ],
     'prefer-default-export': 'off',
-  }
-};
+  },
+  ignorePatterns: ['.eslintrc.js'],
+  settings: {
+    'import/resolver': {
+      webpack: {
+        config: {
+          resolve: {
+            alias: {
+              '~': path.resolve('src'),
+            },
+            extensions: ['.tsx', '.ts', '.js', '.scss'],
+          },
+        },
+      },
+    },
+  },
+}
