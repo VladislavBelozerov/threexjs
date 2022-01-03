@@ -74,7 +74,6 @@
     "webpack-merge": "^5.7.3"
   },
   "dependencies": {
-    "@types/lodash-es": "^4.17.5",
     "gsap": "^3.8.0",
     "three": "^0.132.2"
   }
