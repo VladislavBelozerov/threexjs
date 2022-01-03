@@ -1,5 +1,9 @@
 const path = require('path')
 module.exports = {
+  env: {
+    browser: true,
+    node: true,
+  },
   extends: ['airbnb-typescript/base', 'plugin:prettier/recommended'],
   parserOptions: {
     project: './tsconfig.json',

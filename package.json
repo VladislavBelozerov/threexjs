@@ -2,14 +2,42 @@
   "name": "threexjs",
   "version": "1.0.0",
   "author": "Vladislav Belozerov <vladislavbelozerovtsk@gmail.com>",
+  "description": "Threexjs framework",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/VladislavBelozerov/threexjs"
+  },
+  "main": "dist/threex.js",
+  "keywords": [
+    "three",
+    "three.js",
+    "javascript",
+    "3d",
+    "virtual-reality",
+    "framework",
+    "webgl",
+    "webgl2",
+    "canvas"
+  ],
+  "homepage": "https://github.com/VladislavBelozerov/threexjs",
+  "bugs": {
+    "url": "https://github.com/VladislavBelozerov/threexjs/issues"
+  },
   "license": "MIT",
   "main": "index.ts",
   "scripts": {
-    "dev": "webpack serve --open --config ./.webpack/dev.js",
-    "build": "webpack --config ./configs/build.js",
+    "dev": "webpack serve --config ./.webpack/dev.js --open",
+    "build": "webpack --config ./.webpack/prod.js",
     "lint": "eslint ./src",
     "lint:fix": "eslint ./src --fix --color"
   },
+  "files": [
+    "dist/threex.js",
+    "dist/threex.min.js",
+    "LICENSE",
+    "package.json",
+    "README.md"
+  ],
   "browserslist": [
     "> 1% and last 3 versions",
     "not dead",
@@ -43,11 +71,12 @@
     "typescript": "^4.4.3",
     "webpack": "^5.36.2",
     "webpack-cli": "^4.6.0",
-    "webpack-dev-server": "^3.11.2",
+    "webpack-dev-server": "^4.7.2",
     "webpack-merge": "^5.7.3"
   },
   "dependencies": {
     "@types/lodash-es": "^4.17.5",
+    "gsap": "^3.8.0",
     "lodash-es": "^4.17.21",
     "three": "^0.132.2"
   }

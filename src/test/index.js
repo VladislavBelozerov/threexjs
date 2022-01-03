@@ -1,13 +1,36 @@
-/* Threex test env */
-/* Used only in dev mode */
-import Threex from '~/index'
-import assets from '~/test/assets'
+import gsap from 'gsap'
+import Threex from '~/modules/main'
+import TestComponent from '~/test/components/TestComponent'
 
 class Test {
+  threex
+  testScene
+
   constructor() {
     this.threex = new Threex({
-      assets,
+      components: {
+        TestComponent: {
+          props: {
+            isActive: false,
+          },
+
+          module: TestComponent,
+        },
+      },
+
+      gsap,
     })
+
+    this.testScene = this.threex.TestComponent
+
+    const container = document.getElementById('container')
+
+    this.testScene.$setup(container)
+    this.testScene.$start()
+
+    setTimeout(() => {
+      this.testScene.$destroy()
+    }, 2000)
   }
 }
 

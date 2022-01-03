@@ -17,7 +17,7 @@ module.exports = {
   },
   plugins: [
     new ESLintPlugin({
-      extensions: ['js', 'ts', 'tsx'],
+      extensions: ['js', 'ts', 'tsx']
     }),
   ],
   resolve: {

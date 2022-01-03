@@ -7,21 +7,20 @@ module.exports = merge(baseWebpackConfig, {
   mode: 'development',
   devtool: 'inline-source-map',
   entry: {
-    test: {
-      import: './src/test/index.js',
-    },
+    test: './src/test/index.js',
   },
   devServer: {
-    contentBase: './src/static',
+    static: './src/test/static',
+    hot: true,
   },
   plugins: [
     new HtmlWebpackPlugin({
       title: 'threexjs',
-      template: './src/static/index.html',
+      template: './src/test/static/index.html',
     }),
   ],
   output: {
-    path: path.resolve(__dirname, './src/static'),
+    path: path.resolve(__dirname, './src/test/static'),
     filename: '[name].bundle.js',
   },
 })
