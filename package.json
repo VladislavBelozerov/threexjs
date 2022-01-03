@@ -1,6 +1,6 @@
 {
   "name": "threexjs",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "author": "Vladislav Belozerov <vladislavbelozerovtsk@gmail.com>",
   "description": "Threexjs framework",
   "repository": {
@@ -76,7 +76,6 @@
   "dependencies": {
     "@types/lodash-es": "^4.17.5",
     "gsap": "^3.8.0",
-    "lodash-es": "^4.17.21",
     "three": "^0.132.2"
   }
 }

@@ -1,5 +1,3 @@
-import isFunction from 'lodash-es/isFunction'
-
 interface Options {
   autoTick: boolean
   useDefaultTick: boolean
@@ -118,11 +116,6 @@ class ThreexComponent {
       }
 
       if (
-        field.type === 'function' &&
-        !isFunction(this.component[field.name])
-      ) {
-        throw new Error(`${field.name} is not a function`)
-      } else if (
         field.type !== 'any' &&
         typeof this.component[field.name] !== field.type
       ) {
@@ -135,7 +128,7 @@ class ThreexComponent {
     // @ts-ignore
     const hook: any = this[hookName]
 
-    if (hook && isFunction(hook)) {
+    if (hook && typeof hook === 'function') {
       if (args.length) hook.bind(this)(...args)
       else hook.bind(this)()
     }

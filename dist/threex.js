@@ -27,205 +27,6 @@ __webpack_require__.d(__webpack_exports__, {
   "Z": function() { return /* binding */ main; }
 });
 
-;// CONCATENATED MODULE: ./node_modules/lodash-es/_freeGlobal.js
-/** Detect free variable `global` from Node.js. */
-var freeGlobal = typeof global == 'object' && global && global.Object === Object && global;
-
-/* harmony default export */ var _freeGlobal = (freeGlobal);
-
-;// CONCATENATED MODULE: ./node_modules/lodash-es/_root.js
-
-
-/** Detect free variable `self`. */
-var freeSelf = typeof self == 'object' && self && self.Object === Object && self;
-
-/** Used as a reference to the global object. */
-var root = _freeGlobal || freeSelf || Function('return this')();
-
-/* harmony default export */ var _root = (root);
-
-;// CONCATENATED MODULE: ./node_modules/lodash-es/_Symbol.js
-
-
-/** Built-in value references. */
-var _Symbol_Symbol = _root.Symbol;
-
-/* harmony default export */ var _Symbol = (_Symbol_Symbol);
-
-;// CONCATENATED MODULE: ./node_modules/lodash-es/_getRawTag.js
-
-
-/** Used for built-in method references. */
-var objectProto = Object.prototype;
-
-/** Used to check objects for own properties. */
-var _getRawTag_hasOwnProperty = objectProto.hasOwnProperty;
-
-/**
- * Used to resolve the
- * [`toStringTag`](http://ecma-international.org/ecma-262/7.0/#sec-object.prototype.tostring)
- * of values.
- */
-var nativeObjectToString = objectProto.toString;
-
-/** Built-in value references. */
-var symToStringTag = _Symbol ? _Symbol.toStringTag : undefined;
-
-/**
- * A specialized version of `baseGetTag` which ignores `Symbol.toStringTag` values.
- *
- * @private
- * @param {*} value The value to query.
- * @returns {string} Returns the raw `toStringTag`.
- */
-function getRawTag(value) {
-  var isOwn = _getRawTag_hasOwnProperty.call(value, symToStringTag),
-      tag = value[symToStringTag];
-
-  try {
-    value[symToStringTag] = undefined;
-    var unmasked = true;
-  } catch (e) {}
-
-  var result = nativeObjectToString.call(value);
-  if (unmasked) {
-    if (isOwn) {
-      value[symToStringTag] = tag;
-    } else {
-      delete value[symToStringTag];
-    }
-  }
-  return result;
-}
-
-/* harmony default export */ var _getRawTag = (getRawTag);
-
-;// CONCATENATED MODULE: ./node_modules/lodash-es/_objectToString.js
-/** Used for built-in method references. */
-var _objectToString_objectProto = Object.prototype;
-
-/**
- * Used to resolve the
- * [`toStringTag`](http://ecma-international.org/ecma-262/7.0/#sec-object.prototype.tostring)
- * of values.
- */
-var _objectToString_nativeObjectToString = _objectToString_objectProto.toString;
-
-/**
- * Converts `value` to a string using `Object.prototype.toString`.
- *
- * @private
- * @param {*} value The value to convert.
- * @returns {string} Returns the converted string.
- */
-function objectToString(value) {
-  return _objectToString_nativeObjectToString.call(value);
-}
-
-/* harmony default export */ var _objectToString = (objectToString);
-
-;// CONCATENATED MODULE: ./node_modules/lodash-es/_baseGetTag.js
-
-
-
-
-/** `Object#toString` result references. */
-var nullTag = '[object Null]',
-    undefinedTag = '[object Undefined]';
-
-/** Built-in value references. */
-var _baseGetTag_symToStringTag = _Symbol ? _Symbol.toStringTag : undefined;
-
-/**
- * The base implementation of `getTag` without fallbacks for buggy environments.
- *
- * @private
- * @param {*} value The value to query.
- * @returns {string} Returns the `toStringTag`.
- */
-function baseGetTag(value) {
-  if (value == null) {
-    return value === undefined ? undefinedTag : nullTag;
-  }
-  return (_baseGetTag_symToStringTag && _baseGetTag_symToStringTag in Object(value))
-    ? _getRawTag(value)
-    : _objectToString(value);
-}
-
-/* harmony default export */ var _baseGetTag = (baseGetTag);
-
-;// CONCATENATED MODULE: ./node_modules/lodash-es/isObject.js
-/**
- * Checks if `value` is the
- * [language type](http://www.ecma-international.org/ecma-262/7.0/#sec-ecmascript-language-types)
- * of `Object`. (e.g. arrays, functions, objects, regexes, `new Number(0)`, and `new String('')`)
- *
- * @static
- * @memberOf _
- * @since 0.1.0
- * @category Lang
- * @param {*} value The value to check.
- * @returns {boolean} Returns `true` if `value` is an object, else `false`.
- * @example
- *
- * _.isObject({});
- * // => true
- *
- * _.isObject([1, 2, 3]);
- * // => true
- *
- * _.isObject(_.noop);
- * // => true
- *
- * _.isObject(null);
- * // => false
- */
-function isObject(value) {
-  var type = typeof value;
-  return value != null && (type == 'object' || type == 'function');
-}
-
-/* harmony default export */ var lodash_es_isObject = (isObject);
-
-;// CONCATENATED MODULE: ./node_modules/lodash-es/isFunction.js
-
-
-
-/** `Object#toString` result references. */
-var asyncTag = '[object AsyncFunction]',
-    funcTag = '[object Function]',
-    genTag = '[object GeneratorFunction]',
-    proxyTag = '[object Proxy]';
-
-/**
- * Checks if `value` is classified as a `Function` object.
- *
- * @static
- * @memberOf _
- * @since 0.1.0
- * @category Lang
- * @param {*} value The value to check.
- * @returns {boolean} Returns `true` if `value` is a function, else `false`.
- * @example
- *
- * _.isFunction(_);
- * // => true
- *
- * _.isFunction(/abc/);
- * // => false
- */
-function isFunction(value) {
-  if (!lodash_es_isObject(value)) {
-    return false;
-  }
-  // The use of `Object#toString` avoids issues with the `typeof` operator
-  // in Safari 9 which returns 'object' for typed arrays and other constructors.
-  var tag = _baseGetTag(value);
-  return tag == funcTag || tag == genTag || tag == asyncTag || tag == proxyTag;
-}
-
-/* harmony default export */ var lodash_es_isFunction = (isFunction);
-
 ;// CONCATENATED MODULE: ./src/modules/main/ThreexComponent.ts
 function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
 
@@ -248,8 +49,6 @@ function _defineProperties(target, props) { for (var i = 0; i < props.length; i+
 function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
-
 
 var ThreexComponent = /*#__PURE__*/function () {
   function ThreexComponent(ctx, component) {
@@ -362,9 +161,7 @@ var ThreexComponent = /*#__PURE__*/function () {
           throw new Error("".concat(field.name, " is required for Threex component"));
         }
 
-        if (field.type === 'function' && !lodash_es_isFunction(_this2.component[field.name])) {
-          throw new Error("".concat(field.name, " is not a function"));
-        } else if (field.type !== 'any' && _typeof(_this2.component[field.name]) !== field.type) {
+        if (field.type !== 'any' && _typeof(_this2.component[field.name]) !== field.type) {
           throw new Error("".concat(field.name, " is not a ").concat(field.type));
         }
       });
@@ -376,7 +173,7 @@ var ThreexComponent = /*#__PURE__*/function () {
       // @ts-ignore
       var hook = this[hookName];
 
-      if (hook && lodash_es_isFunction(hook)) {
+      if (hook && typeof hook === 'function') {
         if (args.length) hook.bind(this).apply(void 0, _toConsumableArray(args));else hook.bind(this)();
       }
     }
