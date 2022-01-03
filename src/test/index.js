@@ -27,10 +27,6 @@ class Test {
 
     this.testScene.$setup(container)
     this.testScene.$start()
-
-    setTimeout(() => {
-      this.testScene.$destroy()
-    }, 2000)
   }
 }
 
