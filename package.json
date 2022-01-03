@@ -31,8 +31,7 @@
     "lint:fix": "eslint ./src --fix --color"
   },
   "files": [
-    "dist/threex.js",
-    "dist/threex.min.js",
+    "dist",
     "LICENSE",
     "package.json",
     "README.md"
@@ -53,6 +52,7 @@
     "@types/three": "^0.133.1",
     "@typescript-eslint/eslint-plugin": "^4.22.1",
     "babel-loader": "^8.2.2",
+    "babel-polyfill": "^6.26.0",
     "css-loader": "^5.2.4",
     "eslint": "^7.25.0",
     "eslint-config-airbnb-typescript": "^12.3.1",

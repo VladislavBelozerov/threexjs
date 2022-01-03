@@ -7,6 +7,7 @@ module.exports = merge(baseWebpackConfig, {
   mode: 'development',
   devtool: 'inline-source-map',
   entry: {
+    'babel-polyfill': 'babel-polyfill',
     test: './src/test/index.js',
   },
   devServer: {
