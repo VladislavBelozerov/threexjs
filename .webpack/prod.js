@@ -10,9 +10,14 @@ module.exports = [
       path: path.resolve(__dirname, '../dist'),
       filename: 'threex.js',
       clean: true,
+      module: true,
+      libraryTarget: 'module',
     },
     optimization: {
       minimize: false,
+    },
+    experiments: {
+      outputModule: true,
     },
   }),
 
@@ -22,6 +27,11 @@ module.exports = [
     output: {
       path: path.resolve(__dirname, '../dist'),
       filename: 'threex.min.js',
+      module: true,
+      libraryTarget: 'module',
+    },
+    experiments: {
+      outputModule: true,
     },
   }),
 ]

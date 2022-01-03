@@ -4512,6 +4512,16 @@ three@^0.132.2:
   resolved "https://registry.npmjs.org/three/-/three-0.132.2.tgz"
   integrity sha512-0wcR7LxxkXMn6Gi58gEs3QvY8WpTVXA31L2VOvpjm4ZPYFRHCZC13UqynheFoS5OXDYgtBneN0dhbaNBE8iLhQ==
 
+threexjs@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/threexjs/-/threexjs-1.0.1.tgz#2f9c37f605f259e614de1422e093d8cc36256e99"
+  integrity sha512-Cid6wcdoj2yGy/iMilu3k3dFqJIZFTHN5q4JdiWa5bsiqeqvwt++OTNPZ6gvvdOvL6IxcFME5jU2VSiviiYIcw==
+  dependencies:
+    "@types/lodash-es" "^4.17.5"
+    gsap "^3.8.0"
+    lodash-es "^4.17.21"
+    three "^0.132.2"
+
 thunky@^1.0.2:
   version "1.1.0"
   resolved "https://registry.npmjs.org/thunky/-/thunky-1.1.0.tgz"

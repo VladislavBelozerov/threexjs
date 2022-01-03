@@ -1,8 +1,31 @@
-/******/ (function() { // webpackBootstrap
-/******/ 	"use strict";
+/******/ // The require scope
+/******/ var __webpack_require__ = {};
+/******/ 
+/************************************************************************/
+/******/ /* webpack/runtime/define property getters */
+/******/ !function() {
+/******/ 	// define getter functions for harmony exports
+/******/ 	__webpack_require__.d = function(exports, definition) {
+/******/ 		for(var key in definition) {
+/******/ 			if(__webpack_require__.o(definition, key) && !__webpack_require__.o(exports, key)) {
+/******/ 				Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
+/******/ 			}
+/******/ 		}
+/******/ 	};
+/******/ }();
+/******/ 
+/******/ /* webpack/runtime/hasOwnProperty shorthand */
+/******/ !function() {
+/******/ 	__webpack_require__.o = function(obj, prop) { return Object.prototype.hasOwnProperty.call(obj, prop); }
+/******/ }();
+/******/ 
+/************************************************************************/
 var __webpack_exports__ = {};
 
-// UNUSED EXPORTS: default
+// EXPORTS
+__webpack_require__.d(__webpack_exports__, {
+  "Z": function() { return /* binding */ main; }
+});
 
 ;// CONCATENATED MODULE: ./node_modules/lodash-es/_freeGlobal.js
 /** Detect free variable `global` from Node.js. */
@@ -228,7 +251,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 
 
-var ThreexComponent_ThreexComponent = /*#__PURE__*/function () {
+var ThreexComponent = /*#__PURE__*/function () {
   function ThreexComponent(ctx, component) {
     var _this$component$optio, _this$component$optio2, _this$component$optio3, _this$component$optio4;
 
@@ -494,16 +517,16 @@ var ThreexComponent_ThreexComponent = /*#__PURE__*/function () {
   return ThreexComponent;
 }();
 
-_defineProperty(ThreexComponent_ThreexComponent, "COMPLEX_FIELDS", ['data', 'methods']);
+_defineProperty(ThreexComponent, "COMPLEX_FIELDS", ['data', 'methods']);
 
-_defineProperty(ThreexComponent_ThreexComponent, "EXCLUDE_FIELDS", ['options']);
+_defineProperty(ThreexComponent, "EXCLUDE_FIELDS", ['options']);
 
-_defineProperty(ThreexComponent_ThreexComponent, "REQUIRED_FIELDS", [{
+_defineProperty(ThreexComponent, "REQUIRED_FIELDS", [{
   name: 'setup',
   type: 'function'
 }]);
 
-/* harmony default export */ var main_ThreexComponent = ((/* unused pure expression or super */ null && (ThreexComponent_ThreexComponent)));
+/* harmony default export */ var main_ThreexComponent = (ThreexComponent);
 ;// CONCATENATED MODULE: ./src/modules/main/index.ts
 function main_classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -518,7 +541,7 @@ function main_defineProperty(obj, key, value) { if (key in obj) { Object.defineP
 /**
  * The module creates a wrapper for convenient writing of scene code
  */
-var Threex = /*#__PURE__*/(/* unused pure expression or super */ null && (function () {
+var Threex = /*#__PURE__*/function () {
   function Threex(props) {
     main_classCallCheck(this, Threex);
 
@@ -552,9 +575,9 @@ var Threex = /*#__PURE__*/(/* unused pure expression or super */ null && (functi
         var component = _this.props.components[key];
 
         if ('module' in component) {
-          _this.components[key] = new ThreexComponent(_this.ctx, component.module, component.props || null);
+          _this.components[key] = new main_ThreexComponent(_this.ctx, component.module, component.props || null);
         } else {
-          _this.components[key] = new ThreexComponent(_this.ctx, component);
+          _this.components[key] = new main_ThreexComponent(_this.ctx, component);
         }
 
         _this[key] = _this.components[key];
@@ -563,8 +586,8 @@ var Threex = /*#__PURE__*/(/* unused pure expression or super */ null && (functi
   }]);
 
   return Threex;
-}()));
+}();
 
-/* harmony default export */ var main = ((/* unused pure expression or super */ null && (Threex)));
-/******/ })()
-;
+/* harmony default export */ var main = (Threex);
+var __webpack_exports__default = __webpack_exports__.Z;
+export { __webpack_exports__default as default };
