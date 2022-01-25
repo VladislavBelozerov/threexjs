@@ -1067,6 +1067,18 @@
   resolved "https://registry.npmjs.org/@types/json5/-/json5-0.0.29.tgz"
   integrity sha1-7ihweulOEdK4J7y+UnC86n8+ce4=
 
+"@types/lodash-es@^4.17.5":
+  version "4.17.5"
+  resolved "https://registry.yarnpkg.com/@types/lodash-es/-/lodash-es-4.17.5.tgz#1c3fdd16849d84aea43890b1c60da379fb501353"
+  integrity sha512-SHBoI8/0aoMQWAgUHMQ599VM6ZiSKg8sh/0cFqqlQQMyY9uEplc0ULU5yQNzcvdR4ZKa0ey8+vFmahuRbOCT1A==
+  dependencies:
+    "@types/lodash" "*"
+
+"@types/lodash@*":
+  version "4.14.178"
+  resolved "https://registry.yarnpkg.com/@types/lodash/-/lodash-4.14.178.tgz#341f6d2247db528d4a13ddbb374bcdc80406f4f8"
+  integrity sha512-0d5Wd09ItQWH1qFbEyQ7oTQ3GZrMfth5JkbN3EvTKLXcHLRDSXeLnlvlOn0wvxVIwK5o2M8JzP/OWz7T3NRsbw==
+
 "@types/mime@^1":
   version "1.3.2"
   resolved "https://registry.npmjs.org/@types/mime/-/mime-1.3.2.tgz"
@@ -4526,6 +4538,15 @@ three@^0.132.2:
   version "0.132.2"
   resolved "https://registry.npmjs.org/three/-/three-0.132.2.tgz"
   integrity sha512-0wcR7LxxkXMn6Gi58gEs3QvY8WpTVXA31L2VOvpjm4ZPYFRHCZC13UqynheFoS5OXDYgtBneN0dhbaNBE8iLhQ==
+
+threexjs@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/threexjs/-/threexjs-1.1.0.tgz#0e1c105517e2ffad87c14469827e4f23f11a594f"
+  integrity sha512-4EP+gZhAAJqJDC2eFD2MDNo/Z4M41JVmRpqhL3Rn3sqwte02sI/wFLpbVDv9WfeX8yjXvIgk8GvRtueHv9XP8g==
+  dependencies:
+    "@types/lodash-es" "^4.17.5"
+    gsap "^3.8.0"
+    three "^0.132.2"
 
 thunky@^1.0.2:
   version "1.1.0"

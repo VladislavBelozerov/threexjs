@@ -29,7 +29,7 @@ class AssetManager {
     this.assets = assets
   }
 
-  public async load(params: LoadParams = {}) {
+  public load(params: LoadParams = {}) {
     // Filter assets
     const assetsToLoad = this.assets.filter((asset) => {
       if (!params.name && !params.label) return true
@@ -38,20 +38,17 @@ class AssetManager {
       if (typeof params.label === 'string' && asset.label === params.label)
         return true
 
-      if (
+      return !!(
         typeof params.label === 'object' &&
         Array.isArray(params.label) &&
         params.label.includes(asset.label)
       )
-        return true
-
-      return false
     })
 
     if (!assetsToLoad.length) {
       if (params.onProgress) params.onProgress(100)
 
-      return
+      return undefined
     }
 
     const promises = []
@@ -105,7 +102,7 @@ class AssetManager {
       )
     }
 
-    await Promise.all(promises)
+    return Promise.all(promises)
   }
 
   public setItem(name: string, item: any = null) {

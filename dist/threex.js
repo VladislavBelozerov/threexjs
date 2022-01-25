@@ -372,7 +372,7 @@ var Threex = /*#__PURE__*/function () {
         var component = _this.props.components[key];
 
         if ('module' in component) {
-          _this.components[key] = new main_ThreexComponent(_this.ctx, component.module, component.props || null);
+          _this.components[key] = new main_ThreexComponent(_this.ctx, component.module, component.props || {});
         } else {
           _this.components[key] = new main_ThreexComponent(_this.ctx, component);
         }

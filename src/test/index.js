@@ -1,8 +1,8 @@
 import gsap from 'gsap'
 import Threex from '~/modules/main'
 import TestComponent from '~/test/components/TestComponent'
-import assetManager from '~/modules/assetManager'
 import assets from '~/test/assets'
+import assetManager from '~/modules/assetManager'
 
 class Test {
   threex

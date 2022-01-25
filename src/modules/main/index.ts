@@ -54,7 +54,7 @@ class Threex {
         this.components[key] = new ThreexComponent(
           this.ctx,
           component.module,
-          component.props || null
+          component.props || {}
         )
       } else {
         this.components[key] = new ThreexComponent(this.ctx, component)
